@@ -1,0 +1,18 @@
+_func
+{
+input parameter [int a, real b] output parameter [int a];
+int a;
+a = 10;
+b = 20.4;
+c = "asas";
+read(a);
+write(a);
+return [c];
+}
+
+
+
+_gap
+{
+
+}

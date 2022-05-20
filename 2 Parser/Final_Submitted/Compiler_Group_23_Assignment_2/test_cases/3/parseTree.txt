@@ -1,0 +1,18 @@
+PROGRAM
+    OTHERFUNC
+        epsilon
+    MAINFUNC
+        TK_GAP_KEYWORD
+        TK_FLOWERL_DELIMITER
+        STMTS
+            STMT
+                IOSTMT
+                    TK_WRITE_KEYWORD
+                    TK_OP_DELIMITER
+                    VAR
+                        TK_STRING_LITERAL
+                    TK_CL_DELIMITER
+                    TK_SEM_DELIMITER
+            STMTS
+                epsilon
+        TK_FLOWERR_DELIMITER

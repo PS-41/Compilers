@@ -1,0 +1,10 @@
+_func(int a)
+return a <= b;
+
+int main()
+{
+    int a = [2, 3];
+    real b = 3.52;
+    variable = a + b - "a ^ b";  "   H^\n\" Ye.1;
+    print(a, b, variable);
+} 

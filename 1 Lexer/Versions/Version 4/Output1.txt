@@ -1,0 +1,12 @@
+Line Number                              Lexeme                              Token Type/Error
+
+          3                                _gap                                TK_GAP_KEYWORD
+          3                                   (                               TK_OP_DELIMITER
+          3                                   )                               TK_CL_DELIMITER
+          4                                   {                          TK_FLOWERL_DELIMITER
+          5                               write                              TK_WRITE_KEYWORD
+          5                                   (                               TK_OP_DELIMITER
+          5                       "Hello World"                             TK_STRING_LITERAL
+          5                                   )                               TK_CL_DELIMITER
+          5                                   ;                              TK_SEM_DELIMITER
+          6                                   }                          TK_FLOWERR_DELIMITER

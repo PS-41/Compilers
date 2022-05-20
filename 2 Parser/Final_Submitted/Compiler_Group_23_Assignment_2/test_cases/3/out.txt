@@ -1,0 +1,41 @@
+Line Number                              Lexeme                              Token Type/Error
+
+          3                                _gap                                TK_GAP_KEYWORD
+          4                                   {                          TK_FLOWERL_DELIMITER
+          5                               write                              TK_WRITE_KEYWORD
+          5                                   (                               TK_OP_DELIMITER
+          5                       "Hello World"                             TK_STRING_LITERAL
+          5                                   )                               TK_CL_DELIMITER
+          5                                   ;                              TK_SEM_DELIMITER
+          6                                   }                          TK_FLOWERR_DELIMITER
+Input                                                                                                         Stack                                                                             Action
+===================================================================================================================================================================================================================
+(TK_GAP_KEYWORD,_gap)(TK_FLOWERL_DELIMITER,{)(TK_WRITE_KEYWORD,write)                                         PROGRAM$                                                                          Rule 1
+(TK_GAP_KEYWORD,_gap)(TK_FLOWERL_DELIMITER,{)(TK_WRITE_KEYWORD,write)                                         OTHERFUNCMAINFUNC$                                                                Rule 4
+(TK_GAP_KEYWORD,_gap)(TK_FLOWERL_DELIMITER,{)(TK_WRITE_KEYWORD,write)                                         MAINFUNC$                                                                         Rule 2
+(TK_GAP_KEYWORD,_gap)(TK_FLOWERL_DELIMITER,{)(TK_WRITE_KEYWORD,write)                                         TK_GAP_KEYWORDTK_FLOWERL_DELIMITERSTMTS                                           Pop
+(TK_FLOWERL_DELIMITER,{)(TK_WRITE_KEYWORD,write)(TK_OP_DELIMITER,()                                           TK_FLOWERL_DELIMITERSTMTSTK_FLOWERR_DELIMITER                                     Pop
+(TK_WRITE_KEYWORD,write)(TK_OP_DELIMITER,()(TK_STRING_LITERAL,"Hello World")                                  STMTSTK_FLOWERR_DELIMITER$                                                        Rule 15
+(TK_WRITE_KEYWORD,write)(TK_OP_DELIMITER,()(TK_STRING_LITERAL,"Hello World")                                  STMTSTMTSTK_FLOWERR_DELIMITER                                                     Rule 21
+(TK_WRITE_KEYWORD,write)(TK_OP_DELIMITER,()(TK_STRING_LITERAL,"Hello World")                                  IOSTMTSTMTSTK_FLOWERR_DELIMITER                                                   Rule 61
+(TK_WRITE_KEYWORD,write)(TK_OP_DELIMITER,()(TK_STRING_LITERAL,"Hello World")                                  TK_WRITE_KEYWORDTK_OP_DELIMITERVAR                                                Pop
+(TK_OP_DELIMITER,()(TK_STRING_LITERAL,"Hello World")(TK_CL_DELIMITER,))                                       TK_OP_DELIMITERVARTK_CL_DELIMITER                                                 Pop
+(TK_STRING_LITERAL,"Hello World")(TK_CL_DELIMITER,))(TK_SEM_DELIMITER,;)                                      VARTK_CL_DELIMITERTK_SEM_DELIMITER                                                Rule 43
+(TK_STRING_LITERAL,"Hello World")(TK_CL_DELIMITER,))(TK_SEM_DELIMITER,;)                                      TK_STRING_LITERALTK_CL_DELIMITERTK_SEM_DELIMITER                                  Pop
+(TK_CL_DELIMITER,))(TK_SEM_DELIMITER,;)(TK_FLOWERR_DELIMITER,})                                               TK_CL_DELIMITERTK_SEM_DELIMITERSTMTS                                              Pop
+(TK_SEM_DELIMITER,;)(TK_FLOWERR_DELIMITER,})($,$)                                                             TK_SEM_DELIMITERSTMTSTK_FLOWERR_DELIMITER                                         Pop
+(TK_FLOWERR_DELIMITER,})($,$)                                                                                 STMTSTK_FLOWERR_DELIMITER$                                                        Rule 16
+(TK_FLOWERR_DELIMITER,})($,$)                                                                                 TK_FLOWERR_DELIMITER$                                                             Pop
+($,$)                                                                                                         $
+
+Correct input, no errors found.
+
+
+Level Order Traversal of the Parse Tree:
+Level 0 -> PROGRAM
+Level 1 -> OTHERFUNC MAINFUNC
+Level 2 -> epsilon TK_GAP_KEYWORD TK_FLOWERL_DELIMITER STMTS TK_FLOWERR_DELIMITER
+Level 3 -> STMT STMTS
+Level 4 -> IOSTMT epsilon
+Level 5 -> TK_WRITE_KEYWORD TK_OP_DELIMITER VAR TK_CL_DELIMITER TK_SEM_DELIMITER
+Level 6 -> TK_STRING_LITERAL

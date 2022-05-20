@@ -1,0 +1,27 @@
+".kla24@34"
+import
+
+
+_func(int a)
+return a <= b or a < b;
+
+int main()
+{
+    int $ COMMENT BEGINS HERE 0.14 a = [2, %3];
+    real b =COMMENT ENDS HERE$           real b =                        3.52 ;
+    STRING string   		  variable = a + b - "a ^ b";  "   H^\n Ye.1;
+    print(a,a^b,variable);
+    a+b-c*d/e%f&g|h^i
+    <          <=            >            >=           =            ==             !=                    
+    123 3.45"hello"
+    -66.12
+    bool temp = true and false
+    if (temp);
+    else ;
+    #
+}
+
+
+int c = 2.4-.55
+int b = a-(-3.4)
+real ps = -.61 + .79+a-2

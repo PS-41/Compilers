@@ -1,0 +1,22 @@
+$ Program to take n numbers from user
+  and then multiply each number by -2.5
+  and print the result in reverse order of input $
+
+  _gap()
+  {
+      int n;
+      read(int, n);
+      list(int) array[n];
+      int i = 0;
+      loop( i < n )
+      {
+          read(int, array[i]);
+          i = i + 1;
+      }
+      i = n-1;
+      loop ( i >= 0)
+      {
+          write(array[i]*-2.5, " ");
+          i = i - 1;
+      }
+  }

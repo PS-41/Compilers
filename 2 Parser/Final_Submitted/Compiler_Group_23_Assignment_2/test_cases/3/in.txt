@@ -1,0 +1,6 @@
+$ This is the first ever written program in GAP
+  Program to print Hello World $
+_gap
+{
+    write("Hello World");
+}

@@ -1,0 +1,21 @@
+$ Program to print factorial of a number $
+
+_factorial(int x) returns int
+{
+    int fact = 1;
+    int val = 2;
+    loop (val <= x)
+    {
+        fact = fact * val;
+        val = val + 1;
+    }
+    return fact;
+}
+
+_gap()
+{
+    int n;
+    read(int, n);
+    int ans = call _factorial(n);
+    write ("Factorial = ", ans);
+}

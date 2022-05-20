@@ -1,0 +1,10 @@
+$ Program to print sum of two numbers input by user $
+
+_gap()
+{
+    int a, b;
+    read(int, a);
+    read(int, b);
+    int sum = a + b;
+    write("The sum = ", sum);
+}

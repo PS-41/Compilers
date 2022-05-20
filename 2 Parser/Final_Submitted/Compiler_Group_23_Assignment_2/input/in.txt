@@ -1,0 +1,28 @@
+_fact {
+    input parameter [int a, string b]
+    output parameter [int c];
+    c=a+b;
+    return [c];
+
+}
+_gap { 
+    int a;
+    int b;
+    int c;
+    a=5;
+    b=6;
+    if a  b
+    {
+        write("Yes");
+    }
+    else
+    {
+        write("No");
+    }
+    [c]= _fact [a,b];
+    write("Addition and =  ");
+    write(c);
+}
+
+
+
